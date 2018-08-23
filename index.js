@@ -1,9 +1,10 @@
+import { get } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import events from '@folio/stripes-core/src/events';
-import { get } from 'lodash';
-
+import coreEvents from '@folio/stripes-core/src/events';
+import events from './events';
 import ServicePointsModal from './lib/ServicePointsModal';
+import NavLink from './lib/NavLink';
 
 export default class ServicePoints extends React.Component {
   static propTypes = {
@@ -11,10 +12,12 @@ export default class ServicePoints extends React.Component {
   };
 
   static eventHandler(event, stripes) {
-    const { user } = stripes;
-
-    if (event === events.LOGIN && !get(user, ['user', 'curServicePoint'])) {
+    if (event === coreEvents.LOGIN && !get(stripes, ['user', 'user', 'curServicePoint'])) {
       return ServicePoints;
+    }
+
+    if (event === events.CHANGE_SERVICE_POINT) {
+      return NavLink;
     }
 
     return null;
@@ -22,15 +25,10 @@ export default class ServicePoints extends React.Component {
 
   render() {
     const { stripes } = this.props;
-    const servicePoints = get(stripes, ['user', 'user', 'servicePoints'], []);
     const curServicePoint = get(stripes, ['user', 'user', 'curServicePoint']);
 
     return (
-      <ServicePointsModal
-        open={!curServicePoint}
-        stripes={stripes}
-        servicePoints={servicePoints}
-      />
+      <ServicePointsModal open={!curServicePoint} stripes={stripes} />
     );
   }
 }
