@@ -17,7 +17,8 @@
     "links": {
       "userDropdown": [
         {
-          "event": "CHANGE_SERVICE_POINT"
+          "event": "CHANGE_SERVICE_POINT",
+          "caption": "ui-servicepoints.userDropdown.switchServicePoint"
         }
       ]
     }
