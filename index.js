@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import coreEvents from '@folio/stripes-core/src/events';
 import events from './events';
 import ServicePointsModal from './lib/ServicePointsModal';
-import NavLink from './lib/NavLink';
 
 export default class ServicePoints extends React.Component {
   static propTypes = {
@@ -12,23 +11,32 @@ export default class ServicePoints extends React.Component {
   };
 
   static eventHandler(event, stripes) {
-    if (event === coreEvents.LOGIN && !get(stripes, ['user', 'user', 'curServicePoint'])) {
-      return ServicePoints;
-    }
+    const curServicePoint = get(stripes, ['user', 'user', 'curServicePoint']);
 
-    if (event === events.CHANGE_SERVICE_POINT) {
-      return NavLink;
+    if (event === events.CHANGE_SERVICE_POINT ||
+      (event === coreEvents.LOGIN && !curServicePoint) {
+      return ServicePoints;
     }
 
     return null;
   }
 
-  render() {
-    const { stripes } = this.props;
-    const curServicePoint = get(stripes, ['user', 'user', 'curServicePoint']);
+  constructor(props) {
+    super(props);
+    this.state = { open: true };
+  }
 
+  closeModal() {
+    this.setState({ open: false });
+  }
+
+  render() {
     return (
-      <ServicePointsModal open={!curServicePoint} stripes={stripes} />
+      <ServicePointsModal
+        open={this.state.open}
+        stripes={this.props.stripes}
+        onClose={() => this.closeModal()}
+      />
     );
   }
 }
