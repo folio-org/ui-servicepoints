@@ -14,7 +14,7 @@ export default class ServicePoints extends React.Component {
     const curServicePoint = get(stripes, ['user', 'user', 'curServicePoint']);
 
     if (event === events.CHANGE_SERVICE_POINT ||
-      (event === coreEvents.LOGIN && !curServicePoint) {
+      (event === coreEvents.LOGIN && !curServicePoint)) {
       return ServicePoints;
     }
 
