@@ -19,7 +19,9 @@ export default class ServicePoints extends React.Component {
       return ServicePoints;
     }
 
-    if (event === coreEvents.SELECT_MODULE && data.name && data.name.match(/checkin|checkout/)) {
+    if (event === coreEvents.SELECT_MODULE &&
+      !curServicePoint &&
+      data.name && data.name.match(/checkin|checkout/)) {
       return AccessModal;
     }
 
