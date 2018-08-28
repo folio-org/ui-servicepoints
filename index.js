@@ -4,18 +4,25 @@ import PropTypes from 'prop-types';
 import coreEvents from '@folio/stripes-core/src/events';
 import events from './events';
 import ServicePointsModal from './lib/ServicePointsModal';
+import AccessModal from './lib/AccessModal';
 
 export default class ServicePoints extends React.Component {
   static propTypes = {
     stripes: PropTypes.object,
   };
 
-  static eventHandler(event, stripes) {
+  static eventHandler(event, stripes, data) {
     const curServicePoint = get(stripes, ['user', 'user', 'curServicePoint']);
 
     if (event === events.CHANGE_SERVICE_POINT ||
       (event === coreEvents.LOGIN && !curServicePoint)) {
       return ServicePoints;
+    }
+
+    if (event === coreEvents.SELECT_MODULE &&
+      !curServicePoint &&
+      data.name && data.name.match(/checkin|checkout/)) {
+      return AccessModal;
     }
 
     return null;

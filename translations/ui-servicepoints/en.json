@@ -1,5 +1,8 @@
 {
   "meta.title": "Service points",
   "selectServicePoint": "Select service point",
-  "userDropdown.switchServicePoint": "Switch service point"
+  "userDropdown.switchServicePoint": "Switch service point",
+  "accessDenied.title": "Access Denied",
+  "accessDenied.message": "You must select a service point to access the <strong>{displayName}</strong>. Please add one or more service points to your user record in the <strong>Users</strong> app. Contact an administrator if you do not have access to this feature.",
+  "accessDenied.close": "Close"
 }
