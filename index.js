@@ -13,9 +13,10 @@ export default class ServicePoints extends React.Component {
 
   static eventHandler(event, stripes, data) {
     const curServicePoint = get(stripes, ['user', 'user', 'curServicePoint']);
+    const spList = get(stripes, ['user', 'user', 'servicePoints'], []);
 
     if (event === events.CHANGE_SERVICE_POINT ||
-      (event === coreEvents.LOGIN && !curServicePoint)) {
+      (event === coreEvents.LOGIN && !curServicePoint && spList.length)) {
       return ServicePoints;
     }
 
