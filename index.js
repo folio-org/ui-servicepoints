@@ -11,6 +11,10 @@ export default class ServicePoints extends React.Component {
     stripes: PropTypes.object,
   };
 
+  static checkServicePoints(stripes) {
+    return get(stripes, ['user', 'user', 'servicePoints'], []).length > 0;
+  }
+
   static eventHandler(event, stripes, data) {
     const curServicePoint = get(stripes, ['user', 'user', 'curServicePoint']);
     const spList = get(stripes, ['user', 'user', 'servicePoints'], []);
