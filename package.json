@@ -18,7 +18,8 @@
       "userDropdown": [
         {
           "event": "CHANGE_SERVICE_POINT",
-          "caption": "ui-servicepoints.userDropdown.switchServicePoint"
+          "caption": "ui-servicepoints.userDropdown.switchServicePoint",
+          "check": "checkServicePoints"
         }
       ]
     }
