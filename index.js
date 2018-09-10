@@ -2,13 +2,17 @@ import { get } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import coreEvents from '@folio/stripes-core/src/events';
-import events from './events';
 import ServicePointsModal from './lib/ServicePointsModal';
 import AccessModal from './lib/AccessModal';
 
 export default class ServicePoints extends React.Component {
   static propTypes = {
     stripes: PropTypes.object,
+    onClose: PropTypes.func,
+  };
+
+  static defaultProps = {
+    onClose: () => {},
   };
 
   static checkServicePoints(stripes) {
@@ -19,7 +23,7 @@ export default class ServicePoints extends React.Component {
     const curServicePoint = get(stripes, ['user', 'user', 'curServicePoint']);
     const spList = get(stripes, ['user', 'user', 'servicePoints'], []);
 
-    if (event === events.CHANGE_SERVICE_POINT ||
+    if (event === coreEvents.CHANGE_SERVICE_POINT ||
       (event === coreEvents.LOGIN && !curServicePoint && spList.length)) {
       return ServicePoints;
     }
@@ -40,6 +44,7 @@ export default class ServicePoints extends React.Component {
 
   closeModal() {
     this.setState({ open: false });
+    this.props.onClose();
   }
 
   render() {
