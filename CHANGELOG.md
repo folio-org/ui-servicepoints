@@ -4,3 +4,5 @@
 
 * First release.
 * Add ability to close SP Modal. Part of UIU-628.
+* Added `onClose` callback to `ServicePoints`. Supports UIU-551.
+

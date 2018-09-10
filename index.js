@@ -9,6 +9,11 @@ import AccessModal from './lib/AccessModal';
 export default class ServicePoints extends React.Component {
   static propTypes = {
     stripes: PropTypes.object,
+    onClose: PropTypes.func,
+  };
+
+  static defaultProps = {
+    onClose: () => {},
   };
 
   static checkServicePoints(stripes) {
@@ -40,6 +45,7 @@ export default class ServicePoints extends React.Component {
 
   closeModal() {
     this.setState({ open: false });
+    this.props.onClose();
   }
 
   render() {
