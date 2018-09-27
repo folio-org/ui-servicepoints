@@ -2,8 +2,8 @@ import { get } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import coreEvents from '@folio/stripes-core/src/events';
-import ServicePointsModal from './lib/ServicePointsModal';
-import AccessModal from './lib/AccessModal';
+import ServicePointsModal from './ServicePointsModal';
+import AccessModal from './AccessModal';
 
 export default class ServicePoints extends React.Component {
   static propTypes = {
