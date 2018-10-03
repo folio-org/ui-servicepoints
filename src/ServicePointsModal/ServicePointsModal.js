@@ -1,10 +1,8 @@
 import React from 'react';
 import { sortBy, get } from 'lodash';
 import PropTypes from 'prop-types';
-import { setCurServicePoint } from '@folio/stripes-core/src/loginServices';
-import Modal from '@folio/stripes-components/lib/Modal';
-import Button from '@folio/stripes-components/lib/Button';
-import { Row, Col } from '@folio/stripes-components/lib/LayoutGrid';
+import { setCurServicePoint } from '@folio/stripes/core';
+import { Button, Col, Modal, Row } from '@folio/stripes/components';
 
 class ServicePointsModal extends React.Component {
   static propTypes = {

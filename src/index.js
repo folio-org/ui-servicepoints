@@ -1,7 +1,7 @@
 import { get } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import coreEvents from '@folio/stripes-core/src/events';
+import { coreEvents } from '@folio/stripes/core';
 import ServicePointsModal from './ServicePointsModal';
 import AccessModal from './AccessModal';
 

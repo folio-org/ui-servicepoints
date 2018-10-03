@@ -1,9 +1,13 @@
 # Change history for ui-servicepoints
 
+## [1.1.0](https://github.com/folio-org/ui-servicepoints/tree/v1.1.0) (2018-10-03)
+[Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v1.0.0...v1.1.0)
+
+* Use `stripes` 1.0 framework
+
 ## [1.0.2](https://github.com/folio-org/ui-servicepoints/tree/v1.0.2) (2018-09-13)
 
 * Add translations
-
 
 ## [1.0.0](https://github.com/folio-org/ui-servicepoints/tree/v1.0.0) (2018-09-10)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v1.0.0...v1.0.0)
