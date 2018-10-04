@@ -1,8 +1,8 @@
 {
-    "meta.title": "Service points",
-    "selectServicePoint": "Select service point",
-    "userDropdown.switchServicePoint": "Switch service point",
-    "accessDenied.title": "Access Denied",
-    "accessDenied.message": "You must select a service point to access the <strong>{displayName}</strong> app. Please add one or more service points to your user record in the <strong>Users</strong> app. Contact an administrator if you do not have the ability to add service points to your record.",
+    "meta.title": "Szolgáltatási pontok",
+    "selectServicePoint": "Szolgáltatási pont kiválasztása",
+    "userDropdown.switchServicePoint": "Szolgáltatási pont váltása",
+    "accessDenied.title": "Hozzáférés megtagadva",
+    "accessDenied.message": "Válasszon egy szolgáltatási pontot <strong>{displayName}</strong> a belépéshez! Kérem, adjon egy vagy több szolgáltatási pontot felhasználói rekodjához a <strong>Felhasználók</strong> alkalmazásban! Ha nem tud szolgáltatási pontot adni felhasználói rekodjához, szóljon egy adminisztrátornak.",
     "accessDenied.close": "Bezár"
 }
