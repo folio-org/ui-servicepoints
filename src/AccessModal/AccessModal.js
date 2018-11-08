@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Col, Modal, Row } from '@folio/stripes/components';
 import SafeHTMLMessage from '@folio/react-intl-safe-html';
+import { FormattedMessage } from 'react-intl';
 
 class AccessModal extends React.Component {
   static propTypes = {
-    stripes: PropTypes.object,
     data: PropTypes.object,
   };
 
@@ -19,7 +19,7 @@ class AccessModal extends React.Component {
   }
 
   render() {
-    const { stripes, data } = this.props;
+    const { data } = this.props;
     const { displayName } = data;
 
     return (
@@ -27,7 +27,7 @@ class AccessModal extends React.Component {
         dismissible
         onClose={() => this.closeModal()}
         open={this.state.open}
-        label={stripes.intl.formatMessage({ id: 'ui-servicepoints.accessDenied.title' })}
+        label={<FormattedMessage id="ui-servicepoints.accessDenied.title" />}
       >
         <p><SafeHTMLMessage id="ui-servicepoints.accessDenied.message" values={{ displayName }} /></p>
         <Col xs={12}>
