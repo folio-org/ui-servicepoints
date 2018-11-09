@@ -1,6 +1,7 @@
 import React from 'react';
 import { sortBy, get } from 'lodash';
 import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
 import { setCurServicePoint } from '@folio/stripes/core';
 import { Button, Col, Modal, Row } from '@folio/stripes/components';
 
@@ -25,7 +26,13 @@ class ServicePointsModal extends React.Component {
     const curServicePoint = get(stripes, ['user', 'user', 'curServicePoint'], {});
 
     return (
-      <Modal open={open} onClose={onClose} closeOnBackgroundClick dismissible label={stripes.intl.formatMessage({ id: 'ui-servicepoints.selectServicePoint' })}>
+      <Modal
+        open={open}
+        onClose={onClose}
+        closeOnBackgroundClick
+        dismissible
+        label={<FormattedMessage id="ui-servicepoints.selectServicePoint" />}
+      >
         <Col xs={12}>
           <Row>
             {
