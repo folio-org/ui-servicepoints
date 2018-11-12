@@ -1,8 +1,8 @@
 {
-    "meta.title": "Service points",
-    "selectServicePoint": "Select service point",
-    "userDropdown.switchServicePoint": "Switch service point",
-    "accessDenied.title": "Access Denied",
-    "accessDenied.message": "You must select a service point to access the <strong>{displayName}</strong> app. Please add one or more service points to your user record in the <strong>Users</strong> app. Contact an administrator if you do not have the ability to add service points to your record.",
-    "accessDenied.close": "Close"
+    "meta.title": "نقاط الخدمة",
+    "selectServicePoint": "حدد نقطة خدمة",
+    "userDropdown.switchServicePoint": "تبديل نقطة الخدمة",
+    "accessDenied.title": "تم رفض الوصول",
+    "accessDenied.message": "يجب تحديد نقطة خدمة للوصول إلى التطبيق <strong> {displayName} </strong> . يرجى إضافة نقطة خدمة واحدة أو أكثر لسجل المستخدم الخاص بك في تطبيق <strong> المستخدمين </strong> . اتصل بأحد المشرفين إذا لم تكن قادراً على إضافى نقاط الخدمة إلى تسجيلتك.",
+    "accessDenied.close": "إغلاق"
 }
