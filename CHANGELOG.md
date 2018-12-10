@@ -1,5 +1,11 @@
 # Change history for ui-servicepoints
 
+## [1.2.0](https://github.com/folio-org/ui-servicepoints/tree/v1.2.0) (2018-12-10)
+[Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v1.1.0...v1.2.0)
+
+* Update translations
+* Replace `stripes.intl` with `FormattedMessage`
+
 ## [1.1.0](https://github.com/folio-org/ui-servicepoints/tree/v1.1.0) (2018-10-03)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v1.0.0...v1.1.0)
 
