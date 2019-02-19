@@ -4,5 +4,5 @@
     "userDropdown.switchServicePoint": "Switch service point",
     "accessDenied.title": "Access Denied",
     "accessDenied.message": "You must select a service point to access the <strong>{displayName}</strong> app. Please add one or more service points to your user record in the <strong>Users</strong> app. Contact an administrator if you do not have the ability to add service points to your record.",
-    "accessDenied.close": "Close"
+    "accessDenied.close": "Chiudi"
 }
