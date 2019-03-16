@@ -1,6 +1,7 @@
 # Change history for ui-servicepoints
 
-## 1.3.1 (IN PROGRESS)
+## [1.3.1](https://github.com/folio-org/ui-servicepoints/tree/v1.3.1) (2019-03-15)
+[Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v1.3.0...v1.3.1)
 
 * Remove unnecessary `aria-label` attribute.
 
