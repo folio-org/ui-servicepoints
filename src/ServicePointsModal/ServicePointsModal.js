@@ -41,7 +41,6 @@ class ServicePointsModal extends React.Component {
                   buttonStyle={(curServicePoint.id === sp.id) ? 'primary' : 'default'}
                   key={sp.id}
                   id={`service-point-btn-${index}`}
-                  arial-label={sp.name}
                   fullWidth
                   onClick={() => this.setCurrentServicePoint(sp)}
                 >
