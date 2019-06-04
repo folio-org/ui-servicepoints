@@ -12,7 +12,9 @@
   },
   "main": "src/index.js",
   "stripes": {
-    "type": "handler",
+    "actsAs": [
+      "handler"
+    ],
     "handlerName": "eventHandler",
     "displayName": "ui-servicepoints.meta.title",
     "links": {
