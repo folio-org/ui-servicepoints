@@ -1,8 +1,8 @@
 {
-    "meta.title": "Service points",
-    "selectServicePoint": "Select service point",
-    "userDropdown.switchServicePoint": "Switch service point",
+    "meta.title": "Punti di distribuzione",
+    "selectServicePoint": "Seleziona punto di distribuzione",
+    "userDropdown.switchServicePoint": "Cambia punto di distribuzione",
     "accessDenied.title": "Accesso negato",
-    "accessDenied.message": "You must select a service point to access the <strong>{displayName}</strong> app. Please add one or more service points to your user record in the <strong>Users</strong> app. Contact an administrator if you do not have the ability to add service points to your record.",
+    "accessDenied.message": "Seleziona un punto di distribuzione per accedere all’app <strong>{displayName}</strong>. Aggiungi uno o più punti di distribuzione al tuo record utente nell’app <strong>Users</strong>. Contatta un amministratore se non sei abilitato ad aggiungere punti di distribuzione al tuo record.",
     "accessDenied.close": "Chiudi"
 }
