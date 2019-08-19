@@ -3,6 +3,6 @@
     "selectServicePoint": "حدد نقطة خدمة",
     "userDropdown.switchServicePoint": "تبديل نقطة الخدمة",
     "accessDenied.title": "تم رفض الوصول",
-    "accessDenied.message": "يجب تحديد نقطة خدمة للوصول إلى التطبيق <strong> {displayName} </strong> . يرجى إضافة نقطة خدمة واحدة أو أكثر لسجل المستخدم الخاص بك في تطبيق <strong> المستخدمين </strong> . اتصل بأحد المشرفين إذا لم تكن قادراً على إضافى نقاط الخدمة إلى تسجيلتك.",
+    "accessDenied.message": "يجب تحديد نقطة خدمة للوصول إلى التطبيق <strong> {displayName} </strong> . يرجى إضافة نقطة خدمة واحدة أو أكثر لتسجيلة المستخدم الخاصة بك في تطبيق <strong> المستخدمين </strong> . اتصل بأحد المشرفين إذا لم تكن قادراً على إضافة نقاط الخدمة إلى تسجيلتك.",
     "accessDenied.close": "إغلاق"
 }
