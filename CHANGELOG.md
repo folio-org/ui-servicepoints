@@ -1,5 +1,10 @@
 # Change history for ui-servicepoints
 
+## [1.4.1](https://github.com/folio-org/ui-servicepoints/tree/v1.4.1) (2019-09-11)
+[Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v1.4.0...v1.4.1)
+
+* Update translations
+
 ## [1.4.0](https://github.com/folio-org/ui-servicepoints/tree/v1.4.0) (2019-06-10)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v1.3.2...v1.4.0)
 
