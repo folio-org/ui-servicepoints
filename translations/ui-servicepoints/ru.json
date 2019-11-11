@@ -3,6 +3,6 @@
     "selectServicePoint": "Выберите пункт обслуживания",
     "userDropdown.switchServicePoint": "Переключить пункт обслуживания",
     "accessDenied.title": "Доступ Запрещен",
-    "accessDenied.message": "You must select a service point to access the <strong>{displayName}</strong> app. Please add one or more service points to your user record in the <strong>Users</strong> app. Contact an administrator if you do not have the ability to add service points to your record.",
+    "accessDenied.message": "Вы должны выбрать точку обслуживания, чтобы получить доступ к приложению <strong> {displayName} </strong> . Добавьте одну или несколько точек обслуживания в свою запись пользователя в приложении <strong> Пользователи </strong> . Обратитесь к администратору, если у вас нет возможности добавлять точки обслуживания в вашу запись.",
     "accessDenied.close": "Закрыть"
 }
