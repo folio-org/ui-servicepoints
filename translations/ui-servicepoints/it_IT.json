@@ -3,6 +3,6 @@
     "selectServicePoint": "Seleziona punto di distribuzione",
     "userDropdown.switchServicePoint": "Cambia punto di distribuzione",
     "accessDenied.title": "Accesso negato",
-    "accessDenied.message": "Seleziona un punto di distribuzione per accedere all’app <strong>{displayName}</strong>. Aggiungi uno o più punti di distribuzione al tuo record utente nell’app <strong>Users</strong>. Contatta un amministratore se non sei abilitato ad aggiungere punti di distribuzione al tuo record.",
+    "accessDenied.message": "Seleziona un punto di distribuzione per accedere all’app <strong>{displayName}</strong>. Aggiungi uno o più punti di distribuzione al tuo record utente nell’app <strong>Utenti</strong>. Contatta un amministratore se non sei abilitato ad aggiungere punti di distribuzione al tuo record.",
     "accessDenied.close": "Chiudi"
 }
