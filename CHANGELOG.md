@@ -1,5 +1,9 @@
 # Change history for ui-servicepoints
 
+## 2.0.0 (IN PROGRESS)
+
+* Update to `@folio/stripes` `v3.0.0`.
+
 ## [1.4.2](https://github.com/folio-org/ui-servicepoints/tree/v1.4.2) (2019-12-04)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v1.4.1...v1.4.2)
 
