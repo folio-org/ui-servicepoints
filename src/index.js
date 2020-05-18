@@ -30,7 +30,7 @@ export default class ServicePoints extends React.Component {
 
     if (event === coreEvents.SELECT_MODULE &&
       !curServicePoint &&
-      data.name && data.name.match(/checkin|checkout/)) {
+      data.name && data.name.match(/checkin|checkout|requests/)) {
       return AccessModal;
     }
 
