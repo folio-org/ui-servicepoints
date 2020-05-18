@@ -1,5 +1,9 @@
 # Change history for ui-servicepoints
 
+## [] (IN PROGRESS)
+
+* Security update eslint to >= 6.2.1 or eslint-util >= 1.4.1. UIU-1598. Fixes UISP-13.
+
 ## [2.0.0](https://github.com/folio-org/ui-servicepoints/tree/v2.0.0) (2020-03-12)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v1.4.2...v2.0.0)
 
