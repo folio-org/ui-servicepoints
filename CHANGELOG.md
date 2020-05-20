@@ -1,5 +1,7 @@
 # Change history for ui-servicepoints
 
+## [2.1.0] (IN PROGRESS)
+
 ## [2.0.0](https://github.com/folio-org/ui-servicepoints/tree/v2.0.0) (2020-03-12)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v1.4.2...v2.0.0)
 
