@@ -2,6 +2,8 @@
 
 ## [2.1.0] (IN PROGRESS)
 
+*Error accessing Requests when user doesn't have a service point selected.  Fixes UIREQ-440.
+
 ## [2.0.0](https://github.com/folio-org/ui-servicepoints/tree/v2.0.0) (2020-03-12)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v1.4.2...v2.0.0)
 
