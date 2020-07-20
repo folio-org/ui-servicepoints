@@ -24,9 +24,11 @@ class AccessModal extends React.Component {
 
     return (
       <Modal
+        data-test-access-modal
         dismissible
         onClose={() => this.closeModal()}
         open={this.state.open}
+
         label={<FormattedMessage id="ui-servicepoints.accessDenied.title" />}
       >
         <p><SafeHTMLMessage id="ui-servicepoints.accessDenied.message" values={{ displayName }} /></p>
