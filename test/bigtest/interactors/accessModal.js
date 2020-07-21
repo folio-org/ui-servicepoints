@@ -7,9 +7,8 @@ import {
 
 @interactor
 class AccessModalInteractor {
-    static defaultScope = 'body';
     present = isPresent('[data-test-access-modal]');
-    clickClose = clickable('button');
+    clickClose = clickable('[data-test-access-modal-close]');
 }
 
 export default AccessModalInteractor;

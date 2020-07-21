@@ -20,7 +20,7 @@ export default function setupApplication({
   modules = [],
   translations = {},
   permissions = {},
-  stripesConfig,
+  stripesConfig = { hasAllPerms: true },
   mirageOptions = {},
   scenarios,
   currentUser = {},

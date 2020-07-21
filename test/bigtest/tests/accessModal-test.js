@@ -5,9 +5,11 @@ import React, { Component } from 'react';
 
 import setupApplication from '../helpers/setup-core-application';
 import AppInteractor from '../interactors/app';
+import AccessModalInteractor from '../interactors/accessModal';
 
 describe('Nav', () => {
   const app = new AppInteractor();
+  const modal = new AccessModalInteractor();
 
   class RequestsApp extends Component {
     render() {
@@ -18,7 +20,7 @@ describe('Nav', () => {
   setupApplication({
     modules: [{
       type: 'app',
-      name: '@folio/Requests',
+      name: '@folio/requests',
       displayName: 'requests.title',
       route: '/requests',
       hasSettings: true,
@@ -29,22 +31,11 @@ describe('Nav', () => {
     }
   });
 
-  it('shows a settings button', () => {
-    expect(app.nav('Settings').isPresent).to.be.true;
-  });
-
   it('shows a requests app button', () => {
     expect(app.nav('Requests').isPresent).to.be.true;
   });
-
-  describe('clicking settings', () => {
-    beforeEach(async () => {
-      await app.nav('Settings').click();
-    });
-
-    it('navigates to /settings', function () {
-      expect(this.location.pathname).to.equal('/settings');
-    });
+  it('modal not showing', () => {
+    expect(modal.present).to.be.false;
   });
 
   describe('clicking the requests app', () => {
@@ -54,6 +45,24 @@ describe('Nav', () => {
 
     it('navigates to the requests route', function () {
       expect(this.location.pathname).to.equal('/requests');
+    });
+
+    it('access modal showing', function () {
+      expect(modal.present).to.be.true;
+    });
+
+
+
+    describe('clicking the modal close button', () => {
+      beforeEach(async () => {
+        await modal.clickClose();
+      });
+
+      it('access modal closed', function () {
+        expect(modal.present).to.be.false;
+      });
+
+
     });
   });
 });

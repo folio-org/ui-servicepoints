@@ -19,6 +19,7 @@
     "stripes.type": "app",
     "handlerName": "eventHandler",
     "displayName": "ui-servicepoints.meta.title",
+    "route": "/",
     "links": {
       "userDropdown": [
         {
