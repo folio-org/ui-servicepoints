@@ -6,7 +6,7 @@ import {
 
 @interactor
 class SelectServicePointInteractor {
-    static defaultScope = 'data-test-servicepoints-modal';
+    static defaultScope = ('[data-test-servicepoints-modal]');
 
     // are there at least two servicepoints to select from?
     presentDefault = isPresent('.primary');
@@ -14,15 +14,15 @@ class SelectServicePointInteractor {
     // if there is more than one choice, then button 0 will never be the default.
     // so clicking button 0 should change the default service point
     changeServicePoint = clickable('#service-point-button-0');
+    close = clickable('button[aria-label="Dismiss modal"]');
 }
 
 @interactor
 class ServicePointsModalInteractor {
-      static defaultScope = 'body';
-      modalPresent = isPresent('[data-test-servicepoints-modal]');
+      present = isPresent('[data-test-servicepoints-modal]');
 
       // if the modal is present, proceed with next stage of the test
-      changeServicePoint = new SelectServicePointInteractor();
+      buttons = new SelectServicePointInteractor();
 }
 
 export default ServicePointsModalInteractor;

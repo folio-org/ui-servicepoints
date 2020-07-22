@@ -61,8 +61,6 @@ describe('Nav', () => {
       it('access modal closed', function () {
         expect(modal.present).to.be.false;
       });
-
-
     });
   });
 });

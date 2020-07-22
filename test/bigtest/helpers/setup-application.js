@@ -38,7 +38,6 @@ export default function setupApplication({
           lastName: 'User',
           email: 'user@folio.org',
           addresses: [],
-          servicePoints: [],
           ...currentUser },
         currentPerms: permissions
       };
