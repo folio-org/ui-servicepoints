@@ -1,11 +1,10 @@
 import { describe, it, beforeEach } from '@bigtest/mocha';
 import { expect } from 'chai';
 import setupApplication from '../helpers/setup-core-application';
-import AppInteractor from '../interactors/app';
 import ServicePointsModalInteractor from '../interactors/servicePointsModal';
 
-describe('ServicePointsModal', () => {
-  const app = new AppInteractor();
+
+describe('Service Point Modal Test', () => {
   const modal = new ServicePointsModalInteractor();
 
   setupApplication({
@@ -23,34 +22,34 @@ describe('ServicePointsModal', () => {
         discoveryDisplayName : 'Circulation Desk -- Back Entrance',
       }, {
         id : '3',
-        name : 'Circ Desk 1',
-        code : 'cd1',
-        discoveryDisplayName : 'Circulation Desk -- Hallway',
+        name : 'Circ Desk 3',
+        code : 'cd3',
+        discoveryDisplayName : 'Circulation Desk -- Front Entrance',
       }]
     },
   });
 
-  it('service points modal is closed', function () {
-    expect(modal.present).to.be.false;
+  // visiting the servicepoints module will automatically pop-up the select service points module.
+
+  beforeEach(async function () {
+    this.visit('/servicepoints');
+  });
+  it('servicepoint menu is showing', () => {
+    expect(modal.visible).to.equal(true);
   });
 
-  describe('clicking on nav menu btn', () => {
+  it('has a primary button, indicating a pre-set default servicepoint', () => {
+    expect(modal.buttons.presentDefault).to.equal(true);
+  });
+  it('has two secondary buttons', () => {
+    expect(modal.buttons.changeServicePoint().length).to.be.equal(2);
+  });
+  describe('clicking on one of the non-primary buttons', () => {
     beforeEach(async () => {
-      await app.clickOnMenuDropdown();
+      await modal.buttons.changeServicePoint(0).click();
     });
-
-    it('profile button present', function () {
-      expect(app.profileNav.isPresent).to.be.true;
-    });
-
-    describe('clicking the switch service points menu option', () => {
-      beforeEach(async () => {
-        await app.profileNav.clickOnSwitchServicePointBtn();
-      });
-
-      it('service points modal showing', function () {
-        expect(modal.present).to.be.true;
-      });
+    it('Modal should vanish when a button is clicked', () => {
+      expect(modal.present).to.equal(false);
     });
   });
 });
