@@ -1,11 +1,11 @@
 import { describe, it, beforeEach } from '@bigtest/mocha';
 import { expect } from 'chai';
 import setupApplication from '../helpers/setup-core-application';
-import ProfileInteractor from '../interactors/app';
+import AppInteractor from '../interactors/app';
 import ServicePointsModalInteractor from '../interactors/servicePointsModal';
 
-describe('Nav', () => {
-  const app = new ProfileInteractor();
+describe('ServicePointsModal', () => {
+  const app = new AppInteractor();
   const modal = new ServicePointsModalInteractor();
 
   setupApplication({
@@ -30,21 +30,27 @@ describe('Nav', () => {
     },
   });
 
-
   it('service points modal is closed', function () {
     expect(modal.present).to.be.false;
   });
-  it('profile button present', function () {
-    expect(app.present).to.be.true;
-  });
 
-  describe('clicking the switch service points menu option', () => {
+  describe('clicking on nav menu btn', () => {
     beforeEach(async () => {
-      await app.nav();
+      await app.clickOnMenuDropdown();
     });
 
-    it('service points modal showing', function () {
-      expect(modal.present).to.be.true;
+    it('profile button present', function () {
+      expect(app.profileNav.isPresent).to.be.true;
+    });
+
+    describe('clicking the switch service points menu option', () => {
+      beforeEach(async () => {
+        await app.profileNav.clickOnSwitchServicePointBtn();
+      });
+
+      it('service points modal showing', function () {
+        expect(modal.present).to.be.true;
+      });
     });
   });
 });

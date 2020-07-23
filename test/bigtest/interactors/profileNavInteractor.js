@@ -1,10 +1,10 @@
-import { interactor, clickable, isPresent } from '@bigtest/interactor';
+import { interactor, clickable } from '@bigtest/interactor';
 
-
-@interactor class ProfileInteractor {
+@interactor class ProfileNavInteractor {
   static defaultScope = ('[data-test-nav-list-section]');
-  present = clickable('#service-points-clickable-menuItem0');
+
+  clickOnSwitchServicePointBtn = clickable('#service-points-clickable-menuItem0');
   nav = clickable('#service-points-clickable-menuItem0');
 }
 
-export default ProfileInteractor;
+export default ProfileNavInteractor;
