@@ -13,8 +13,7 @@
   "main": "src/index.js",
   "stripes": {
     "actsAs": [
-      "handler",
-      "app"
+      "handler"
     ],
     "stripes.type": "app",
     "handlerName": "eventHandler",
