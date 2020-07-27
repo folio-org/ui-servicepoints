@@ -6,15 +6,6 @@ import ServicePointsModal from './ServicePointsModal';
 import AccessModal from './AccessModal';
 
 export default class ServicePoints extends React.Component {
-  static propTypes = {
-    stripes: PropTypes.object,
-    onClose: PropTypes.func,
-  };
-
-  static defaultProps = {
-    onClose: () => {},
-  };
-
   static checkServicePoints(stripes) {
     return get(stripes, ['user', 'user', 'servicePoints'], []).length > 0;
   }
@@ -36,6 +27,15 @@ export default class ServicePoints extends React.Component {
 
     return null;
   }
+
+  static propTypes = {
+    stripes: PropTypes.object,
+    onClose: PropTypes.func,
+  };
+
+  static defaultProps = {
+    onClose: () => {},
+  };
 
   constructor(props) {
     super(props);
