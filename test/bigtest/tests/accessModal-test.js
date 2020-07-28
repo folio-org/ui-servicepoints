@@ -1,8 +1,6 @@
 import { describe, it, beforeEach } from '@bigtest/mocha';
 import { expect } from 'chai';
-
 import React, { Component } from 'react';
-
 import setupApplication from '../helpers/setup-core-application';
 import AppInteractor from '../interactors/app';
 import AccessModalInteractor from '../interactors/accessModal';

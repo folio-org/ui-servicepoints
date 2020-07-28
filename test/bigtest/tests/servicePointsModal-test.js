@@ -1,13 +1,37 @@
 import { describe, it, beforeEach } from '@bigtest/mocha';
 import { expect } from 'chai';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import setupApplication from '../helpers/setup-core-application';
 import ServicePointsModalInteractor from '../interactors/servicePointsModal';
+import ServicePoints from '../../../src/index';
+
 
 
 describe('Service Point Modal Test', () => {
   const modal = new ServicePointsModalInteractor();
+  class DummyApp extends Component {
+    static propTypes = {
+      stripes: PropTypes.object,
+    };
+
+    render() {
+      return (<ServicePoints stripes={this.props.stripes} />);
+    }
+  }
 
   setupApplication({
+    modules: [{
+      type: 'app',
+      name: '@folio/dummy',
+      displayName: 'dummy.title',
+      route: '/dummy',
+      hasSettings: true,
+      module: DummyApp
+    }],
+    translations: {
+      'dummy.title': 'Dummy App'
+    },
     currentUser: {
       curServicePoint: { id: '1', name: 'Online' },
       servicePoints:[{
@@ -32,7 +56,7 @@ describe('Service Point Modal Test', () => {
   // visiting the servicepoints module will automatically pop-up the select service points module.
 
   beforeEach(async function () {
-    this.visit('/servicepoints');
+    this.visit('/dummy');
   });
   it('servicepoint menu is showing', () => {
     expect(modal.visible).to.equal(true);
