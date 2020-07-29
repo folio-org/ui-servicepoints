@@ -1,9 +1,12 @@
 # Change history for ui-servicepoints
 
+## 3.1.0 (IN PROGRESS)
+
+* Add test coverage . Refs UISP-11.
+
 ## [3.0.0](https://github.com/folio-org/ui-servicepoints/tree/v3.0.0) (2020-06-10)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v2.0.0...v3.0.0)
 
-* Added bigTest coverage.  Adresses UISP-11
 * Update `react-intl` to `^4.5`. Refs STRIPES-672.
 * Update `@folio/stripes` to `v4.0.0`.
 * Error accessing Requests when user doesn't have a service point selected.  Fixes UIREQ-440.
