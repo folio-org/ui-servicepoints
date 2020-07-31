@@ -27,6 +27,7 @@ class ServicePointsModal extends React.Component {
 
     return (
       <Modal
+        data-test-servicepoints-modal
         open={open}
         onClose={onClose}
         closeOnBackgroundClick

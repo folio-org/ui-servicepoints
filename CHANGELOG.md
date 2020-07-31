@@ -1,5 +1,9 @@
 # Change history for ui-servicepoints
 
+## 3.1.0 (IN PROGRESS)
+
+* Add test coverage . Refs UISP-11.
+
 ## [3.0.0](https://github.com/folio-org/ui-servicepoints/tree/v3.0.0) (2020-06-10)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v2.0.0...v3.0.0)
 
