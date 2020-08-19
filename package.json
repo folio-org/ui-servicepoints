@@ -35,7 +35,6 @@
   },
   "devDependencies": {
     "miragejs": "^0.1.32",
-    "@bigtest/mirage": "^0.0.1",
     "@folio/stripes": "^5.0.0",
     "@folio/stripes-core": "^5.0.0",
     "core-js": "^3.6.4",
