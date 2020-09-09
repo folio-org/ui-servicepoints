@@ -36,7 +36,7 @@
   "devDependencies": {
     "miragejs": "^0.1.32",
     "@folio/stripes": "^5.0.0",
-    "@folio/stripes-core": "^5.0.0",
+    "@folio/stripes-core": "^6.0.0",
     "core-js": "^3.6.4",
     "@folio/stripes-components": "~8.0.0",
     "@folio/stripes-connect": "~6.0.0",
