@@ -1,9 +1,10 @@
 # Change history for ui-servicepoints
 
-## 3.1.0 (IN PROGRESS)
+## [4.0.0](https://github.com/folio-org/ui-servicepoints/tree/v4.0.0) (2020-10-14)
+[Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v3.0.0...v4.0.0)
 
-* Upgraded dependencies to stripes 5.  Addresses UISP-20.
-* Add test coverage . Refs UISP-11.
+* Update `@folio/stripes` to `v5.0.0`. Addresses UISP-20.
+* Add test coverage. Refs UISP-11.
 
 ## [3.0.0](https://github.com/folio-org/ui-servicepoints/tree/v3.0.0) (2020-06-10)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v2.0.0...v3.0.0)
