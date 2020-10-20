@@ -1,6 +1,7 @@
 # Change history for ui-servicepoints
 
-## 4.0.1 IN PROGRESS
+## [4.0.1](https://github.com/folio-org/ui-servicepoints/tree/v4.0.1) (2020-10-19)
+[Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v4.0.0...v4.0.1)
 
 * Use `react-intl` and `react-intl-safe-html` version compatible with `stripes` `v5`.
 
