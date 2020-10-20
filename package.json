@@ -54,13 +54,13 @@
     "mocha": "^8.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-intl": "^4.5.3",
+    "react-intl": "^5.7.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "sinon": "^7.2.2"
   },
   "dependencies": {
-    "@folio/react-intl-safe-html": "^2.0.0",
+    "@folio/react-intl-safe-html": "^3.0.0",
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0"
   },
@@ -68,8 +68,8 @@
     "@folio/stripes": "^5.0.0",
     "react": "*",
     "react-dom": "*",
+    "react-intl": "^5.7.0",
     "react-router": "^5.2.0",
-    "react-intl": "^4.5.3",
     "react-router-dom": "^5.2.0"
   }
 }
