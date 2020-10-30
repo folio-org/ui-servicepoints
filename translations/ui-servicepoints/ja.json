@@ -3,6 +3,6 @@
     "selectServicePoint": "サービスポイントを選択",
     "userDropdown.switchServicePoint": "サービスポイントの切り替え",
     "accessDenied.title": "アクセスが拒否されました",
-    "accessDenied.message": "You must select a service point to access the <strong>{displayName}</strong> app. Please add one or more service points to your user record in the <strong>Users</strong> app. Contact an administrator if you do not have the ability to add service points to your record.",
+    "accessDenied.message": "<strong> {displayName} </strong>アプリにアクセスするには、サービスポイントを選択する必要があります。 <strong>ユーザー</strong>アプリのユーザーレコードに1つ以上のサービスポイントを追加してください。レコードにサービスポイントを追加する権限がない場合は、管理者に連絡してください。",
     "accessDenied.close": "閉じる"
 }
