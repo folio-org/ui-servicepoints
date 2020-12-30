@@ -1,8 +1,8 @@
 {
-    "meta.title": "Service points",
-    "selectServicePoint": "Select service point",
-    "userDropdown.switchServicePoint": "Switch service point",
+    "meta.title": "Servicestelle",
+    "selectServicePoint": "Servicestelle auswählen",
+    "userDropdown.switchServicePoint": "Servicestelle wechseln",
     "accessDenied.title": "Zugriff verweigert",
-    "accessDenied.message": "You must select a service point to access the <strong>{displayName}</strong> app. Please add one or more service points to your user record in the <strong>Users</strong> app. Contact an administrator if you do not have the ability to add service points to your record.",
+    "accessDenied.message": "Eine Servicestelle muss ausgewählt werden, um auf die App <strong>{displayName}</strong> zuzugreifen. Bitte eine oder mehrere Servicestellen zu Ihrem Benutzerdatensatz in der <strong>Nutzer</strong> App hinzufügen oder den Administrator kontaktieren, um Servicestellen hinzufügen zu lassen.",
     "accessDenied.close": "Schließen"
 }
