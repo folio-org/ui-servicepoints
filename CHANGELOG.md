@@ -1,5 +1,9 @@
 # Change history for ui-servicepoints
 
+## [5.0.0] IN PROGRESS
+
+* Upgrade stripes to v6. Refs UISP-22.
+
 ## [4.0.1](https://github.com/folio-org/ui-servicepoints/tree/v4.0.1) (2020-10-19)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v4.0.0...v4.0.1)
 
