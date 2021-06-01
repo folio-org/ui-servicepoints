@@ -3,6 +3,6 @@
     "selectServicePoint": "Sélectionnez un point/lieu de service",
     "userDropdown.switchServicePoint": "Changer de point/lieu de service",
     "accessDenied.title": "Accès refusé",
-    "accessDenied.message": "You must select a service point to access the <strong>{displayName}</strong> app. Please add one or more service points to your user record in the <strong>Users</strong> app. Contact an administrator if you do not have the ability to add service points to your record.",
+    "accessDenied.message": "Vous devez sélectionner un point de service pour accéder à l'application <strong> {displayName} </strong> . Veuillez ajouter un ou plusieurs points de service à votre profil d'utilisateur dans l'application <strong> Utilisateurs </strong> . Contactez un administrateur si vous ne pouvez pas ajouter de points de service à votre profil.",
     "accessDenied.close": "Fermer"
 }
