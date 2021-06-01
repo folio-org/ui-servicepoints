@@ -1,8 +1,8 @@
 {
-    "meta.title": "Service points",
+    "meta.title": "서비스 포인트",
     "selectServicePoint": "서비스 포인트 선택",
-    "userDropdown.switchServicePoint": "Switch service point",
-    "accessDenied.title": "Access Denied",
-    "accessDenied.message": "You must select a service point to access the <strong>{displayName}</strong> app. Please add one or more service points to your user record in the <strong>Users</strong> app. Contact an administrator if you do not have the ability to add service points to your record.",
-    "accessDenied.close": "Close"
+    "userDropdown.switchServicePoint": "서비스 포인트 전환",
+    "accessDenied.title": "액세스 거부됨",
+    "accessDenied.message": "<strong>{displayName}</strong> 앱에 액세스하려면 서비스 지점을 선택해야 합니다. <strong>Users</strong> 앱에서 사용자 레코드에 하나 이상의 서비스 포인트를 추가하십시오. 레코드에 서비스 포인트를 추가할 수 없는 경우 관리자에게 문의하십시오.",
+    "accessDenied.close": "닫기"
 }
