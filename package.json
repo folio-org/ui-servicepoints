@@ -1,6 +1,6 @@
 {
   "name": "@folio/servicepoints",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Service Points handler for Stripes",
   "repository": "folio-org/ui-servicepoints",
   "publishConfig": {
