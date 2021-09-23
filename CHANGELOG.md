@@ -1,5 +1,9 @@
 # Change history for ui-servicepoints
 
+## [6.0.0] IN PROGRESS
+
+* Increment stripes to v7, react to v17. Refs UISP-28.
+
 ## [5.0.1](https://github.com/folio-org/ui-servicepoints/tree/v5.0.1) (2021-06-18)
 
 * Translations.
