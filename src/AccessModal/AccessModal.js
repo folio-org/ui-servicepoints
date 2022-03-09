@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Col, Modal, Row } from '@folio/stripes/components';
-import SafeHTMLMessage from '@folio/react-intl-safe-html';
 import { FormattedMessage } from 'react-intl';
 
 class AccessModal extends React.Component {
@@ -31,11 +30,11 @@ class AccessModal extends React.Component {
 
         label={<FormattedMessage id="ui-servicepoints.accessDenied.title" />}
       >
-        <p><SafeHTMLMessage id="ui-servicepoints.accessDenied.message" values={{ displayName }} /></p>
+        <p><FormattedMessage id="ui-servicepoints.accessDenied.message" values={{ displayName }} /></p>
         <Col xs={12}>
           <Row end="xs">
             <Button data-test-access-modal-close buttonStyle="primary" onClick={() => this.closeModal()}>
-              <SafeHTMLMessage id="ui-servicepoints.accessDenied.close" />
+              <FormattedMessage id="ui-servicepoints.accessDenied.close" />
             </Button>
           </Row>
         </Col>

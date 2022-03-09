@@ -2,6 +2,8 @@
 
 ## 6.1.0 (IN PROGRESS)
 
+* Replace `SafeHTMLMessage` with `FormattedMessage`. Refs UISP-26.
+
 ## [6.0.0](https://github.com/folio-org/ui-servicepoints/tree/v6.0.0) (2021-10-05)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v5.0.1...v6.0.0)
 
