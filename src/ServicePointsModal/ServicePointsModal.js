@@ -1,10 +1,14 @@
 import React from 'react';
-import { sortBy, get } from 'lodash';
+import { sortBy } from 'lodash';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import { setCurServicePoint } from '@folio/stripes/core';
-import { Button, Col, Modal, Row } from '@folio/stripes/components';
 
+import { Button, Col, Modal, Row } from '@folio/stripes/components';
+import { updateUser } from '@folio/stripes/core';
+
+/**
+ * Show a modal with buttons for each available service-point,
+ */
 class ServicePointsModal extends React.Component {
   static propTypes = {
     stripes: PropTypes.object,
@@ -13,8 +17,14 @@ class ServicePointsModal extends React.Component {
   };
 
   setCurrentServicePoint(servicePoint) {
-    const { stripes: { store }, onClose } = this.props;
-    setCurServicePoint(store, servicePoint);
+    const { stripes, onClose } = this.props;
+
+    // persist to storage
+    updateUser(stripes.store, { curServicePoint: servicePoint });
+
+    // rerender root
+    stripes.updateUser({ curServicePoint: servicePoint });
+
     if (onClose) {
       onClose();
     }
@@ -22,8 +32,8 @@ class ServicePointsModal extends React.Component {
 
   render() {
     const { stripes, open, onClose } = this.props;
-    const servicePoints = get(stripes, ['user', 'user', 'servicePoints'], []);
-    const curServicePoint = get(stripes, ['user', 'user', 'curServicePoint'], {});
+    const servicePoints = stripes?.user?.user?.servicePoints ?? [];
+    const curServicePoint = stripes?.user?.user?.curServicePoint ?? {};
 
     return (
       <Modal

@@ -1,59 +1,41 @@
-import { get } from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
-import { coreEvents } from '@folio/stripes/core';
-import ServicePointsModal from './ServicePointsModal';
-import AccessModal from './AccessModal';
+
+import {
+  handleCheckServicePoints,
+  handleEvent
+} from './eventHandlers';
+import ChangeServicePoint from './ChangeServicePoint';
 
 export default class ServicePoints extends React.Component {
+  /**
+   * checkServicePoints
+   * package.json::stripes.links.userDropdown event handler
+   *
+   * Note that this function is called before coreEvents.LOGIN is fired,
+   * meaning the stripes object here is in its initial form, as instantiated
+   * by stripes-core prior to being decorated by any other event handlers.
+   *
+   * @param {object} stripes
+   * @returns {boolean} true if
+   */
   static checkServicePoints(stripes) {
-    return get(stripes, ['user', 'user', 'servicePoints'], []).length > 0;
+    return handleCheckServicePoints(stripes);
   }
 
+  /**
+   * eventHandler
+   * package.json::stripes.handlerName event handler
+   * @param {string} event
+   * @param {object} stripes
+   * @param {} data
+   *
+   * @returns null, or a Component in order to prevent the event from propagating
+   */
   static eventHandler(event, stripes, data) {
-    const curServicePoint = get(stripes, ['user', 'user', 'curServicePoint']);
-    const spList = get(stripes, ['user', 'user', 'servicePoints'], []);
-
-    if (event === coreEvents.CHANGE_SERVICE_POINT ||
-      (event === coreEvents.LOGIN && !curServicePoint && spList.length)) {
-      return ServicePoints;
-    }
-
-    if (event === coreEvents.SELECT_MODULE &&
-      !curServicePoint &&
-      data.name && data.name.match(/checkin|checkout|requests/)) {
-      return AccessModal;
-    }
-
-    return null;
-  }
-
-  static propTypes = {
-    stripes: PropTypes.object,
-    onClose: PropTypes.func,
-  };
-
-  static defaultProps = {
-    onClose: () => {},
-  };
-
-  constructor(props) {
-    super(props);
-    this.state = { open: true };
-  }
-
-  closeModal() {
-    this.setState({ open: false });
-    this.props.onClose();
+    return handleEvent(event, stripes, data) ?? null;
   }
 
   render() {
-    return (
-      <ServicePointsModal
-        open={this.state.open}
-        stripes={this.props.stripes}
-        onClose={() => this.closeModal()}
-      />
-    );
+    return <ChangeServicePoint />;
   }
 }
