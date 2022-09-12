@@ -19,11 +19,8 @@ class ServicePointsModal extends React.Component {
   setCurrentServicePoint(servicePoint) {
     const { stripes, onClose } = this.props;
 
-    // persist to storage
+    // persist to storage and dispatch, causing root and stripes to re-render
     updateUser(stripes.store, { curServicePoint: servicePoint });
-
-    // rerender root
-    stripes.updateUser({ curServicePoint: servicePoint });
 
     if (onClose) {
       onClose();

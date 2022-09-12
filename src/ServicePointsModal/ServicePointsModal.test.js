@@ -2,6 +2,8 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
+import { updateUser } from '@folio/stripes/core';
+
 import ServicePointsModal from './ServicePointsModal';
 
 describe('ServicePointsModal', () => {
@@ -12,7 +14,7 @@ describe('ServicePointsModal', () => {
         curServicePoint: { name: 'alpha', id: 'a' },
       }
     },
-    updateUser: jest.fn(),
+    store: {},
   };
 
   test('modal is present', async () => {
@@ -37,7 +39,7 @@ describe('ServicePointsModal', () => {
 
     await userEvent.click(screen.getByText('beta'));
 
-    expect(stripes.updateUser).toHaveBeenCalledWith({ curServicePoint: { name: 'beta', id: 'b' } });
+    expect(updateUser).toHaveBeenCalledWith(stripes.store, { curServicePoint: { name: 'beta', id: 'b' } });
     expect(onClose).toHaveBeenCalled();
   });
 
