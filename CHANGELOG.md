@@ -3,6 +3,7 @@
 ## 6.2.0 IN PROGRESS
 
 * Parse login-response to read service-point details. Refs UISP-32.
+* replace babel-eslint with @babel/eslint-parser. Refs UISP-33.
 
 ## [6.1.0](https://github.com/folio-org/ui-servicepoints/tree/v6.1.0) (2022-06-27)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v6.0.0...v6.1.0)
