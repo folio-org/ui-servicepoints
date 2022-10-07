@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import { Button, Col, Modal, Row } from '@folio/stripes/components';
 import { FormattedMessage } from 'react-intl';
 
+/**
+ * Show an access-denied modal, e.g. when user visits an app
+ * where a ServicePoint is required but one has not been configured.
+ */
 class AccessModal extends React.Component {
   static propTypes = {
     data: PropTypes.object,
@@ -27,7 +31,6 @@ class AccessModal extends React.Component {
         dismissible
         onClose={() => this.closeModal()}
         open={this.state.open}
-
         label={<FormattedMessage id="ui-servicepoints.accessDenied.title" />}
       >
         <p><FormattedMessage id="ui-servicepoints.accessDenied.message" values={{ displayName }} /></p>
