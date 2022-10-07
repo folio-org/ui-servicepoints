@@ -7,6 +7,12 @@ import ChangeServicePoint from './ChangeServicePoint';
  * handleCheckServicePoints
  * return true if servicePoints is a non-empty array
  *
+ * NOTE: This function is invoked by index::checkServicePoints, as specified
+ * in package.json::stripes.links.userDropdown, which is called before
+ * coreEvents.LOGIN is fired, meaning the stripes object passed in here
+ * is in its initial form as instantiated by stripes core, prior to being
+ * decorated by any other event handlers, including `handleEvent` defined here.
+ *
  * @param {object} stripes
  * @returns {boolean}
  */
@@ -16,7 +22,7 @@ export const handleCheckServicePoints = (stripes) => {
 
 
 /**
- *
+ * handleEvent
  * @param {string} event an event as defined by @folio/stripes/core/coreEvents
  * @param {object} stripes
  * @param {object} data

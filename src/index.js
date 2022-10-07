@@ -11,12 +11,17 @@ export default class ServicePoints extends React.Component {
    * checkServicePoints
    * package.json::stripes.links.userDropdown event handler
    *
-   * Note that this function is called before coreEvents.LOGIN is fired,
-   * meaning the stripes object here is in its initial form, as instantiated
-   * by stripes-core prior to being decorated by any other event handlers.
+   * This function will return true if the user is affiliated with one or more
+   * services points, i.e. if it is possible to switch the currently-assigned
+   * service point.
+   *
+   * Returning true means the userDropdown should include a "Switch service points"
+   * entry that, when clicked, will fire a CHANGE_SERVICE_POINT event.
+   *
+   * Returning false means no entries will be added to the userDropdown.
    *
    * @param {object} stripes
-   * @returns {boolean} true if
+   * @returns {boolean} true to show a "switch service points" menu item
    */
   static checkServicePoints(stripes) {
     return handleCheckServicePoints(stripes);
@@ -25,6 +30,7 @@ export default class ServicePoints extends React.Component {
   /**
    * eventHandler
    * package.json::stripes.handlerName event handler
+   *
    * @param {string} event
    * @param {object} stripes
    * @param {} data
