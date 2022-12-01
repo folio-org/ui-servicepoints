@@ -3,6 +3,6 @@
     "selectServicePoint": "Výběr servisního místa",
     "userDropdown.switchServicePoint": "Přepnout servisní místo",
     "accessDenied.title": "Přístup odepřen",
-    "accessDenied.message": "Pro přístup k aplikaci <strong>{displayName}</strong> musíte vybrat servisní bod. Přidejte jeden nebo více servisních bodů do záznamu uživatele v aplikaci <strong>Uživatelé</strong>. Obraťte se na správce, pokud nemáte možnost přidat servisní body do záznamu.",
+    "accessDenied.message": "Pro přístup k aplikaci <strong>{displayName}</strong> musíte vybrat servisní místo. Přidejte jedeno nebo více servisních míst do záznamu uživatele v aplikaci <strong>Uživatelé</strong>. Obraťte se na správce, pokud nemáte možnost přidat servisní body do záznamu.",
     "accessDenied.close": "Zavřít"
 }
