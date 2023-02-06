@@ -2,11 +2,13 @@
 
 ## 6.3.0 IN PROGRESS
 
+* Bump stripes to 8.0.0 for Orchid/2023-R1. Refs UISP-41.
+
 ## [6.2.0](https://github.com/folio-org/ui-servicepoints/tree/v6.2.0) (2022-10-24)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v6.1.0...v6.2.0)
 
 * Parse login-response to read service-point details. Refs UISP-32.
-* replace babel-eslint with @babel/eslint-parser. Refs UISP-33.
+* Replace babel-eslint with @babel/eslint-parser. Refs UISP-33.
 
 ## [6.1.0](https://github.com/folio-org/ui-servicepoints/tree/v6.1.0) (2022-06-27)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v6.0.0...v6.1.0)
