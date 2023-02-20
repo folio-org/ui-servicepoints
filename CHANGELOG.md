@@ -1,6 +1,7 @@
 # Change history for ui-servicepoints
 
-## 6.3.0 IN PROGRESS
+## [6.3.0](https://github.com/folio-org/ui-servicepoints/tree/v6.3.0) (2023-02-20)
+[Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v6.2.0...v6.3.0)
 
 * Bump stripes to 8.0.0 for Orchid/2023-R1. Refs UISP-41.
 
