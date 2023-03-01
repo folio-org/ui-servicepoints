@@ -1,8 +1,8 @@
 {
-    "meta.title": "Servisní místa",
-    "selectServicePoint": "Výběr servisního místa",
-    "userDropdown.switchServicePoint": "Přepnout servisní místo",
+    "meta.title": "Pulty služeb",
+    "selectServicePoint": "Výběr pultu služeb",
+    "userDropdown.switchServicePoint": "Přepnout pult služeb",
     "accessDenied.title": "Přístup odepřen",
-    "accessDenied.message": "Pro přístup k aplikaci <strong>{displayName}</strong> musíte vybrat servisní místo. Přidejte jedeno nebo více servisních míst do záznamu uživatele v aplikaci <strong>Uživatelé</strong>. Obraťte se na správce, pokud nemáte možnost přidat servisní body do záznamu.",
+    "accessDenied.message": "Pro přístup k aplikaci <strong>{displayName}</strong> musíte vybrat pult služeb. Přidejte jeden nebo více pultů služeb do záznamu uživatele v aplikaci <strong>Uživatelé</strong>. Pokud nemáte možnost přidat pulty služeb do svého záznamu, obraťte se na správce.",
     "accessDenied.close": "Zavřít"
 }
