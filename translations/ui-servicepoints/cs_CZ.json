@@ -3,6 +3,6 @@
     "selectServicePoint": "Výběr pultu služeb",
     "userDropdown.switchServicePoint": "Přepnout pult služeb",
     "accessDenied.title": "Přístup odepřen",
-    "accessDenied.message": "Pro přístup k aplikaci <strong>{displayName}</strong> musíte vybrat pult služeb. Přidejte jeden nebo více pultů služeb do záznamu uživatele v aplikaci <strong>Uživatelé</strong>. Pokud nemáte možnost přidat pulty služeb do svého záznamu, obraťte se na správce.",
+    "accessDenied.message": "Pro přístup k aplikaci <strong>{displayName}</strong> musíte vybrat pult služeb. Přidejte prosím jeden nebo více pultů služeb do záznamu uživatele v aplikaci <strong>Uživatelé</strong>. Pokud nemáte možnost přidat pulty služeb do svého záznamu, obraťte se na správce.",
     "accessDenied.close": "Zavřít"
 }
