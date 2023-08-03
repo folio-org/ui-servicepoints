@@ -1,6 +1,7 @@
 import React from 'react';
 
-jest.mock('@folio/stripes-components', () => ({
+jest.mock('@folio/stripes/components', () => ({
+  ...jest.requireActual('@folio/stripes/components'),
   Accordion: jest.fn(({ children, ...rest }) => (
     <span {...rest}>{children}</span>
   )),
@@ -183,3 +184,7 @@ jest.mock('@folio/stripes-components', () => ({
     </div>
   )),
 }));
+
+jest.mock('@folio/stripes-components/util/currencies', () => {
+  return {};
+});
