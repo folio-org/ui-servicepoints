@@ -1,8 +1,9 @@
 # Change history for ui-servicepoints
 
-## 6.4.0 IN PROGRESS
+## 7.0.0 IN PROGRESS
 
 * Do not publish CI artifacts (e.g. test coverage) to NPM.
+* *BREAKING* bump react to v18, and dev-deps accordingly. Refs UISP-46.
 
 ## [6.3.0](https://github.com/folio-org/ui-servicepoints/tree/v6.3.0) (2023-02-20)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v6.2.0...v6.3.0)
