@@ -1,9 +1,12 @@
 # Change history for ui-servicepoints
 
-## 7.0.0 IN PROGRESS
+## 8.0.0 IN PROGRESS
+
+## [7.0.0](https://github.com/folio-org/ui-servicepoints/tree/v7.0.0) (2023-10-12)
+[Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v6.3.0...v7.0.0)
 
 * Do not publish CI artifacts (e.g. test coverage) to NPM.
-* *BREAKING* bump react to v18, and dev-deps accordingly. Refs UISP-46.
+* *BREAKING* bump react to v18, and dev-deps accordingly. Refs UISP-46, UISP-47.
 * Add PULL_REQUEST_TEMPLATE.md file to the repository. Refs UISP-44.
 * Update Node.js to v18 in GitHub Actions. Refs UISP-48.
 * *BREAKING* bump `react-intl` to `v6.4.4`. Refs UISP-49.
