@@ -30,6 +30,7 @@ export const handleCheckServicePoints = (stripes) => {
  * @returns null, or a Component in order to prevent the event from propagating
  */
 export const handleEvent = (event, stripes, data) => {
+  const APP_LIST_THAT_REQUIRES_SERVICE_POINT = ['checkin', 'checkout', 'requests'];
   let curServicePoint = stripes?.okapi?.currentUser?.curServicePoint;
   let servicePoints = stripes?.okapi?.currentUser?.servicePoints ?? [];
 
@@ -62,7 +63,7 @@ export const handleEvent = (event, stripes, data) => {
   // changing apps when
   if (event === coreEvents.SELECT_MODULE &&
     !curServicePoint &&
-    data.name && data.name.match(/checkin|checkout|requests/)) {
+    data.name && APP_LIST_THAT_REQUIRES_SERVICE_POINT.includes(data.name)) {
     return AccessModal;
   }
 
