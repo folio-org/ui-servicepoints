@@ -1,6 +1,10 @@
 # Change history for ui-servicepoints
 
-## 7.1.0 IN PROGRESS
+## 7.2.0 IN PROGRESS
+
+## [7.1.0](https://github.com/folio-org/ui-servicepoints/tree/v7.1.0) (2023-03-18)
+[Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v7.0.0...v7.1.0)
+
 * User should see app that do not require service point. Refs UISP-51.
 
 ## [7.0.0](https://github.com/folio-org/ui-servicepoints/tree/v7.0.0) (2023-10-12)
