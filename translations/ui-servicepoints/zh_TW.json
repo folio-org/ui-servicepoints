@@ -3,6 +3,6 @@
     "selectServicePoint": "選擇工作區",
     "userDropdown.switchServicePoint": "切換工作區",
     "accessDenied.title": "存取被拒絕",
-    "accessDenied.message": "您必須選擇工作區才能訪問<strong>{displayName}</strong> App。請在<strong>使用者</strong> App 中為為您的使用者帳號新增一個或多個工作區。如果您無法新增，請與管理員聯繫。",
+    "accessDenied.message": "您必須選擇工作區才能存取<strong>{displayName}</strong> App。請在<strong>使用者</strong> App 中為為您的使用者帳號新增一個或多個工作區。如果您無法新增，請與管理員聯繫。",
     "accessDenied.close": "關閉"
 }
