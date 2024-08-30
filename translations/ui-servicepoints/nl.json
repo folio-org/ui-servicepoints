@@ -1,8 +1,8 @@
 {
-    "meta.title": "Service points",
-    "selectServicePoint": "Select service point",
-    "userDropdown.switchServicePoint": "Switch service point",
-    "accessDenied.title": "Access Denied",
-    "accessDenied.message": "You must select a service point to access the <strong>{displayName}</strong> app. Please add one or more service points to your user record in the <strong>Users</strong> app. Contact an administrator if you do not have the ability to add service points to your record.",
-    "accessDenied.close": "Close"
+    "meta.title": "Servicepunten",
+    "selectServicePoint": "Servicepunt selecteren",
+    "userDropdown.switchServicePoint": "Servicepunt wisselen",
+    "accessDenied.title": "Toegang geweigerd",
+    "accessDenied.message": "U moet een servicepunt selecteren om toegang te krijgen tot de <strong>{displayName}</strong>-app. Voeg één of meer servicepunten toe aan uw gebruikersrecord in de <strong>Gebruikers</strong>-app. Neem contact op met een beheerder als u geen servicepunten aan uw record kunt toevoegen.",
+    "accessDenied.close": "Sluiten"
 }
