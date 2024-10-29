@@ -1,12 +1,12 @@
 # Change history for ui-servicepoints
 
-## [7.2.0](https://github.com/folio-org/ui-servicepoints/tree/v7.2.0) (2023-10-29)
+## [7.2.0](https://github.com/folio-org/ui-servicepoints/tree/v7.2.0) (2024-10-29)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v7.1.0...v7.2.0)
 
 * Upgrade version for `actions/upload-artifact` from v2 to v4. Refs UISP-59.
 * Several translations have been updated.
 
-## [7.1.0](https://github.com/folio-org/ui-servicepoints/tree/v7.1.0) (2023-03-18)
+## [7.1.0](https://github.com/folio-org/ui-servicepoints/tree/v7.1.0) (2024-03-18)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v7.0.0...v7.1.0)
 
 * User should see app that do not require service point. Refs UISP-51.
