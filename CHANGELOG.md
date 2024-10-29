@@ -2,6 +2,8 @@
 
 ## 7.2.0 IN PROGRESS
 
+* Upgrade version for `actions/upload-artifact` from v2 to v4. Refs UISP-59.
+
 ## [7.1.0](https://github.com/folio-org/ui-servicepoints/tree/v7.1.0) (2023-03-18)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v7.0.0...v7.1.0)
 
