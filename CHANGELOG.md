@@ -1,5 +1,10 @@
 # Change history for ui-servicepoints
 
+## [8.0.0] In progress
+
+* *BREAKING* Migrate stripes dependencies to their Sunflower versions. Refs UISP-62.
+* *BREAKING* Migrate react-intl to v7. Refs UISP-63.
+
 ## [7.2.0](https://github.com/folio-org/ui-servicepoints/tree/v7.2.0) (2024-10-29)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v7.1.0...v7.2.0)
 
