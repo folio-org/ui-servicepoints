@@ -5,6 +5,7 @@ import ChangeServicePoint from './ChangeServicePoint';
 import {
   handleCheckServicePoints,
   handleEvent,
+  servicePointIsRequired
 } from './eventHandlers';
 
 describe('handleCheckServicePoints', () => {
@@ -109,50 +110,38 @@ describe('handleEvent', () => {
   });
 });
 
+describe('servicePointIsRequired', () => {
+  describe('returns true for legacy applications', () => {
+    it('checkin', () => {
+      expect(servicePointIsRequired({}, { name: 'checkin' })).toBe(true);
+    });
 
+    it('checkout', () => {
+      expect(servicePointIsRequired({}, { name: 'checkout' })).toBe(true);
+    });
 
-// export const handleEvent = (event, stripes, data) => {
-//   console.log('ServicePoints.eventHandler')
-//   let curServicePoint = get(stripes, ['okapi', 'currentUser', 'curServicePoint']);
-//   let servicePoints = get(stripes, ['okapi', 'currentUser', 'servicePoints'], []);
+    it('requests', () => {
+      expect(servicePointIsRequired({}, { name: 'requests' })).toBe(true);
+    });
+  });
 
-//   // on login, parse the login response for service point info
-//   // if curServicePoint is already set, we must be reloading an existing session
-//   // in wich case we don't need to parse that response
-//   if (event === coreEvents.LOGIN && !curServicePoint) {
-//     // handleLoginWithoutServicePoint
-//     servicePoints = get(stripes, ['okapi', 'loginData', 'servicePointsUser', 'servicePoints'], []);
-//     const loginDefaultSPId = get(stripes, ['okapi', 'loginData', 'servicePointsUser', 'defaultServicePointId']);
-//     curServicePoint = (!loginDefaultSPId && servicePoints.length === 1) ?
-//       servicePoints[0] :
-//       servicePoints.find(sp => sp.id === loginDefaultSPId);
+  it('returns true for applications of type "servicepointsConsumer"', () => {
+    const stripes = {
+      modules: {
+        servicepointsConsumer: [{ module: 'foo' }]
+      }
+    };
+    const data = { module: 'foo' };
+    expect(servicePointIsRequired(stripes, data)).toBe(true);
+  });
 
-//     // persist to storage
-//     updateUser(stripes.store, {
-//       curServicePoint,
-//       servicePoints,
-//     });
-
-//     stripes.updateUser({
-//       curServicePoint,
-//       servicePoints,
-//     });
-//   }
-
-//   // show the "change service point modal" when
-//   // 1. the CHANGE_SERVICE_POINT event fires (duh)
-//   // 2. on login if the user has SPs but not a current SP
-//   if (event === coreEvents.CHANGE_SERVICE_POINT ||
-//     (event === coreEvents.LOGIN && !curServicePoint && servicePoints.length)) {
-//     return ChangeServicePoint;
-//   }
-
-//   // changing apps when
-//   if (event === coreEvents.SELECT_MODULE &&
-//     !curServicePoint &&
-//     data.name && data.name.match(/checkin|checkout|requests/)) {
-//     return AccessModal;
-//   }
-
-//   return null;
-// };
+  it('returns false for applications without type "servicepointsConsumer"', () => {
+    const stripes = {
+      modules: {
+        servicepointsConsumer: [{ module: 'foo' }]
+      }
+    };
+    const data = { module: 'bar' };
+    expect(servicePointIsRequired(stripes, data)).toBe(true);
+  });
+});

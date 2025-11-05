@@ -1,5 +1,9 @@
 # Change history for ui-servicepoints
 
+## IN PROGRESS
+
+* *BREAKING* Handle dynamically-defined servicepoint consumers. Refs UISP-53.
+
 ## [8.0.0](https://github.com/folio-org/ui-servicepoints/tree/v8.0.0) (2025-03-14)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v7.2.0...v8.0.0)
 

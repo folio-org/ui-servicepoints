@@ -20,17 +20,38 @@ export const handleCheckServicePoints = (stripes) => {
   return (stripes?.okapi?.loginData?.servicePointsUser?.servicePoints ?? []).length > 0;
 };
 
+/**
+ * servicePointIsRequired
+ * @param {object} stripes
+ * @param {object} data { displayName, name, module}
+ * @returns {boolean}
+ */
+export const servicePointIsRequired = (stripes, data) => {
+  // :( legacy: hard-coded list of app-names the require service points
+  if (data.name && ['checkin', 'checkout', 'requests'].includes(data.name)) {
+    return true;
+  }
+
+  // :) search for modules defining stripes.actsAs[..., 'servicePointsConsumer']
+  // and return true if one matches the destination module
+  for (const mod of stripes.modules.servicepointsConsumer || []) {
+    if (mod.module === data.module) {
+      return true;
+    }
+  }
+
+  return false;
+};
 
 /**
  * handleEvent
  * @param {string} event an event as defined by @folio/stripes/core/coreEvents
  * @param {object} stripes
- * @param {object} data
+ * @param {object} data { displayName, name, module}
  *
  * @returns null, or a Component in order to prevent the event from propagating
  */
 export const handleEvent = (event, stripes, data) => {
-  const APP_LIST_THAT_REQUIRES_SERVICE_POINT = ['checkin', 'checkout', 'requests'];
   let curServicePoint = stripes?.okapi?.currentUser?.curServicePoint;
   let servicePoints = stripes?.okapi?.currentUser?.servicePoints ?? [];
 
@@ -46,13 +67,14 @@ export const handleEvent = (event, stripes, data) => {
       servicePoints.find(sp => sp.id === loginDefaultSPId);
 
     // persist to storage and dispatch, causing root and stripes to re-render
+    // TODO: updateUser is async; can/should it be awaited here?
     updateUser(stripes.store, {
       curServicePoint,
       servicePoints,
     });
   }
 
-  // show the "change service point modal" when
+  // show the "change service point modal" for either of these conditions:
   // 1. the CHANGE_SERVICE_POINT event fires (duh)
   // 2. on login if the user has SPs but not a current SP
   if (event === coreEvents.CHANGE_SERVICE_POINT ||
@@ -60,10 +82,13 @@ export const handleEvent = (event, stripes, data) => {
     return ChangeServicePoint;
   }
 
-  // changing apps when
+  // show the "access denied modal" when all these conditions are true:
+  // 1. the SELECT_MODULE event fires
+  // 2. the user does not have a current SP
+  // 3. the destination module requires an SP
   if (event === coreEvents.SELECT_MODULE &&
     !curServicePoint &&
-    data.name && APP_LIST_THAT_REQUIRES_SERVICE_POINT.includes(data.name)) {
+    servicePointIsRequired(stripes, data)) {
     return AccessModal;
   }
 
