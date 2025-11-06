@@ -1,6 +1,6 @@
 {
   "name": "@folio/servicepoints",
-  "version": "9.0.0",
+  "version": "8.0.0",
   "description": "Service Points handler for Stripes",
   "repository": "folio-org/ui-servicepoints",
   "publishConfig": {
@@ -57,7 +57,7 @@
     "prop-types": "^15.6.0"
   },
   "peerDependencies": {
-    "@folio/stripes": "^10.1.0",
+    "@folio/stripes": "^10.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intl": "^7.1.5",
