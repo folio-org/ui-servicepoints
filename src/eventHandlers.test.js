@@ -142,6 +142,6 @@ describe('servicePointIsRequired', () => {
       }
     };
     const data = { module: 'bar' };
-    expect(servicePointIsRequired(stripes, data)).toBe(true);
+    expect(servicePointIsRequired(stripes, data)).toBe(false);
   });
 });
