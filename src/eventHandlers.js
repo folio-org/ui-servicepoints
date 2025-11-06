@@ -34,7 +34,7 @@ export const servicePointIsRequired = (stripes, data) => {
 
   // :) search for modules defining stripes.actsAs[..., 'servicePointsConsumer']
   // and return true if one matches the destination module
-  for (const mod of stripes?.servicepointsConsumer || []) {
+  for (const mod of stripes.modules?.servicepointsConsumer || []) {
     if (mod.module === data.module) {
       return true;
     }
