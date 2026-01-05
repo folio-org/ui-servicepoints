@@ -1,8 +1,8 @@
 {
-    "meta.title": "Service points",
-    "selectServicePoint": "Select service point",
-    "userDropdown.switchServicePoint": "Switch service point",
-    "accessDenied.title": "Access Denied",
-    "accessDenied.message": "You must select a service point to access the <strong>{displayName}</strong> app. Please add one or more service points to your user record in the <strong>Users</strong> app. Contact an administrator if you do not have the ability to add service points to your record.",
-    "accessDenied.close": "Close"
+    "meta.title": "Hizmet noktaları",
+    "selectServicePoint": "Hizmet noktasını seçin",
+    "userDropdown.switchServicePoint": "Anahtar hizmet noktası",
+    "accessDenied.title": "Erişim Reddedildi",
+    "accessDenied.message": "Erişim için bir hizmet noktası seçmelisiniz <strong>{displayName}</strong> uygulaması. Lütfen <strong>Kullanıcılar</strong> uygulamasındaki kullanıcı kaydınıza bir veya daha fazla hizmet noktası ekle. Kayıtlarınıza hizmet noktası ekle yeteneğiniz yoksa bir yöneticiyle iletişime geçin.",
+    "accessDenied.close": "Kapat"
 }
