@@ -92,6 +92,11 @@ describe('handleEvent', () => {
 
     it('service point is missing receives AccessModal', () => {
       const config = {
+        metadata: {
+          requests: {
+            subscribesTo: ['servicepoints'],
+          },
+        },
         okapi: {
           currentUser: {
             curServicePoint: null,
