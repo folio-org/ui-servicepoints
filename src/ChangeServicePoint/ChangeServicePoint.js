@@ -14,7 +14,13 @@ export default class ChangeServicePoint extends React.Component {
   }
 
   closeModal() {
+    const { onClose } = this.props;
+
     this.setState({ open: false });
+
+    if (onClose) {
+      onClose();
+    }
   }
 
   render() {
