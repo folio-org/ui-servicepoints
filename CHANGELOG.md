@@ -2,7 +2,8 @@
 
 ## [9.0.0] IN PROGRESS
 
-* *BREAKING* Read a list of modules from `stripes.metadata` instead of a hard-coded list to display the "Access Denied" modal when a user does not have a service point assigned.
+* *BREAKING* Read a list of modules from `stripes.metadata` instead of a hard-coded list to display the "Access Denied" modal when a user does not have a service point assigned. UISP-53
+* ChangeServicePoint - call `onClose` callback after closing the modal. UISP-68
 
 ## [8.0.0](https://github.com/folio-org/ui-servicepoints/tree/v8.0.0) (2025-03-14)
 [Full Changelog](https://github.com/folio-org/ui-servicepoints/compare/v7.2.0...v8.0.0)
